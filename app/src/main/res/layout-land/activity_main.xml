@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/canvasBackground"
+    android:fitsSystemWindows="false"
+    tools:context="com.andrewfrolkin.jsketch.MainActivity">
+
+    <com.andrewfrolkin.jsketch.PanningViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.andrewfrolkin.jsketch.CanvasView
+            android:id="@+id/canvasView"
+            android:layout_width="700dp"
+            android:layout_height="700dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:splitMotionEvents="false" />
+
+    </com.andrewfrolkin.jsketch.PanningViewGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="30dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/toolbar_size"
+            android:layout_gravity="center_horizontal"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_size"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/selection_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_photo_size_select_small_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/eraser_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_clear_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/rect_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_crop_din_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/circle_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_panorama_fish_eye_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/line_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_remove_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/fill_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_format_color_fill_black_24dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/colors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/red_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/red_button" />
+
+                    <Button
+                        android:id="@+id/green_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_button" />
+
+                    <Button
+                        android:id="@+id/blue_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_button" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/line_thin"
+                        android:layout_width="@dimen/line_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/width4" />
+
+                    <ImageButton
+                        android:id="@+id/line_med"
+                        android:layout_width="@dimen/line_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/width5" />
+
+                    <ImageButton
+                        android:id="@+id/line_lrg"
+                        android:layout_width="@dimen/line_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/width6" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/share_button"
+                        android:layout_width="@dimen/tool_button_height"
+                        android:layout_height="match_parent"
+                        android:background="@color/buttonDefaultColor"
+                        android:src="@drawable/ic_share_black_24dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>
